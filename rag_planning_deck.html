@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAG Application Planning</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            overflow: hidden;
+        }
+        
+        .slide-container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .slide {
+            background: white;
+            width: 90%;
+            max-width: 1200px;
+            height: 85vh;
+            border-radius: 20px;
+            padding: 60px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            display: none;
+            flex-direction: column;
+            position: relative;
+        }
+        
+        .slide.active {
+            display: flex;
+            animation: slideIn 0.5s ease-out;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        h1 {
+            font-size: 3.5em;
+            color: #667eea;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+        
+        h2 {
+            font-size: 2.5em;
+            color: #764ba2;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+        
+        .subtitle {
+            font-size: 1.5em;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        
+        .info-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 5px solid #667eea;
+        }
+        
+        .info-card h3 {
+            color: #667eea;
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+        
+        .info-card p {
+            color: #333;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        
+        .list-item {
+            background: #f8f9fa;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 10px;
+            border-left: 4px solid #764ba2;
+            font-size: 1.2em;
+            color: #333;
+        }
+        
+        .highlight {
+            color: #667eea;
+            font-weight: 600;
+        }
+        
+        .navigation {
+            position: absolute;
+            bottom: 30px;
+            right: 60px;
+            display: flex;
+            gap: 15px;
+        }
+        
+        button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            font-weight: 600;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+        
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        .slide-number {
+            position: absolute;
+            bottom: 30px;
+            left: 60px;
+            color: #999;
+            font-size: 1em;
+        }
+        
+        .metric-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 15px 0;
+        }
+        
+        .metric-box h3 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        
+        .metric-box p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <!-- Slide 1: Title -->
+        <div class="slide active">
+            <div class="content">
+                <h1>RAG Application Planning</h1>
+                <p class="subtitle">Building an Internal IP Search System</p>
+                <div style="margin-top: 40px;">
+                    <p style="font-size: 1.3em; color: #666; line-height: 1.8;">
+                        A comprehensive plan for implementing Retrieval-Augmented Generation<br>
+                        to revolutionize how 2,000 employees access internal knowledge
+                    </p>
+                </div>
+            </div>
+            <div class="slide-number">1 / 8</div>
+        </div>
+
+        <!-- Slide 2: Problem Statement -->
+        <div class="slide">
+            <h2>The Challenge</h2>
+            <div class="content">
+                <div class="list-item">
+                    <strong>Problem:</strong> Employees struggle to find internal IP quickly and efficiently
+                </div>
+                <div class="list-item">
+                    <strong>Impact:</strong> Wasted time, slower onboarding, repeated work
+                </div>
+                <div class="list-item">
+                    <strong>Solution:</strong> AI-powered RAG system for intelligent document search and retrieval
+                </div>
+            </div>
+            <div class="slide-number">2 / 8</div>
+        </div>
+
+        <!-- Slide 3: Scope & Users -->
+        <div class="slide">
+            <h2>Project Scope</h2>
+            <div class="content">
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>👥 User Base</h3>
+                        <p><span class="highlight">2,000 employees</span> across the entire company</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>📚 Content Types</h3>
+                        <p>All internal IP: technical docs, R&D, patents, code, specs, processes</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>💾 Data Source</h3>
+                        <p><span class="highlight">Google Drive</span><br>~10GB of documents</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>🔄 Update Frequency</h3>
+                        <p><span class="highlight">Moderate</span> - Batch refresh (nightly/weekly)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-number">3 / 8</div>
+        </div>
+
+        <!-- Slide 4: Success Metrics -->
+        <div class="slide">
+            <h2>Success Metrics</h2>
+            <div class="content">
+                <div class="metric-box">
+                    <h3>⚡ Time Saved</h3>
+                    <p>Dramatically reduce time to find relevant information</p>
+                </div>
+                <div class="metric-box">
+                    <h3>🚀 Faster Onboarding</h3>
+                    <p>New employees get up to speed quicker with self-service knowledge access</p>
+                </div>
+            </div>
+            <div class="slide-number">4 / 8</div>
+        </div>
+
+        <!-- Slide 5: Technical Overview -->
+        <div class="slide">
+            <h2>Technical Architecture (High-Level)</h2>
+            <div class="content">
+                <div class="list-item">
+                    <strong>1. Data Ingestion:</strong> Connect to Google Drive, extract and process documents
+                </div>
+                <div class="list-item">
+                    <strong>2. Chunking & Embedding:</strong> Break documents into chunks, convert to vector embeddings
+                </div>
+                <div class="list-item">
+                    <strong>3. Vector Storage:</strong> Store embeddings in vector database for fast retrieval
+                </div>
+                <div class="list-item">
+                    <strong>4. Query & Retrieval:</strong> User queries → find relevant chunks → generate answers with LLM
+                </div>
+                <div class="list-item">
+                    <strong>5. Regular Updates:</strong> Nightly/weekly refresh to keep content current
+                </div>
+            </div>
+            <div class="slide-number">5 / 8</div>
+        </div>
+
+        <!-- Slide 6: Key Considerations -->
+        <div class="slide">
+            <h2>Key Considerations</h2>
+            <div class="content">
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>🔒 Security & Access</h3>
+                        <p>Maintain Google Drive permissions, ensure users only see what they're authorized to access</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>📊 Diverse Content</h3>
+                        <p>Handle multiple document types: PDFs, Docs, Sheets, code, presentations</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>👥 User Diversity</h3>
+                        <p>Serve technical and non-technical users with varying query styles</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>📈 Scalability</h3>
+                        <p>Support 2,000 concurrent users with fast response times</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-number">6 / 8</div>
+        </div>
+
+        <!-- Slide 7: Implementation Phases -->
+        <div class="slide">
+            <h2>Implementation Roadmap</h2>
+            <div class="content">
+                <div class="list-item">
+                    <strong>Phase 1:</strong> Evaluate data, choose tech stack, build proof of concept
+                </div>
+                <div class="list-item">
+                    <strong>Phase 2:</strong> Develop chunking strategy, select embedding model, set up vector DB
+                </div>
+                <div class="list-item">
+                    <strong>Phase 3:</strong> Build retrieval pipeline, integrate LLM for answer generation
+                </div>
+                <div class="list-item">
+                    <strong>Phase 4:</strong> Pilot with small user group, gather feedback, iterate
+                </div>
+                <div class="list-item">
+                    <strong>Phase 5:</strong> Company-wide rollout, monitoring, continuous improvement
+                </div>
+            </div>
+            <div class="slide-number">7 / 8</div>
+        </div>
+
+        <!-- Slide 8: Next Steps -->
+        <div class="slide">
+            <h2>Next Steps</h2>
+            <div class="content">
+                <div class="list-item">
+                    <strong>Step 2:</strong> Evaluate your data - Sample documents, analyze structure, identify challenges
+                </div>
+                <div class="list-item">
+                    <strong>Step 3:</strong> Choose your tech stack - Vector DB, embedding model, LLM provider
+                </div>
+                <div class="list-item">
+                    <strong>Step 4:</strong> Design chunking strategy - Optimize for your document types
+                </div>
+                <div class="list-item">
+                    <strong>Step 5:</strong> Build proof of concept - Test with subset of data
+                </div>
+                <div style="margin-top: 40px; text-align: center; font-size: 1.3em; color: #667eea;">
+                    <strong>Ready to move forward with Step 2: Data Evaluation</strong>
+                </div>
+            </div>
+            <div class="slide-number">8 / 8</div>
+        </div>
+    </div>
+
+    <div class="navigation">
+        <button id="prevBtn" onclick="changeSlide(-1)">← Previous</button>
+        <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        function showSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (n + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+            
+            prevBtn.disabled = currentSlide === 0;
+            nextBtn.disabled = currentSlide === slides.length - 1;
+        }
+
+        function changeSlide(direction) {
+            showSlide(currentSlide + direction);
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') changeSlide(-1);
+            if (e.key === 'ArrowRight') changeSlide(1);
+        });
+
+        // Initialize
+        showSlide(0);
+    </script>
+</body>
+</html>

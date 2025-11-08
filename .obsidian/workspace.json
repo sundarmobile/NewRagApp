@@ -1,0 +1,187 @@
+{
+  "main": {
+    "id": "2390452716a6ff2c",
+    "type": "split",
+    "children": [
+      {
+        "id": "2ba6220ddfc61df9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9d559420344fc45c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "architecture-diagram.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "architecture-diagram"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b93fd4eb38767f70",
+    "type": "split",
+    "children": [
+      {
+        "id": "561b906edd719091",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0f83aada90124bb1",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "36a45af3c2c1e346",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "d605ddbce009167a",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "4109388dbac4e4a5",
+    "type": "split",
+    "children": [
+      {
+        "id": "3b486cf2e47d60cc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "46e218274b57422f",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "vision.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for vision"
+            }
+          },
+          {
+            "id": "c20487a5e314ed89",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "vision.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from vision"
+            }
+          },
+          {
+            "id": "491579c5cb69dfcf",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "00f37d8b532ffc10",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "vision.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of vision"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "9d559420344fc45c",
+  "lastOpenFiles": [
+    "AI coding handbook2.pdf",
+    "architecture-diagram.md",
+    "data-flow-diagrams.md",
+    "claude.md",
+    "usage_analytics_svg.svg",
+    "docs/mockups.md",
+    "ascii_mocks.md",
+    "mockups.md",
+    "docs/vision.md",
+    "docs",
+    "vision.md",
+    "rag_project_documentation.md"
+  ]
+}
