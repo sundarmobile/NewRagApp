@@ -1,0 +1,158 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Next.js
+.next/
+out/
+build/
+dist/
+
+# Production
+/build
+
+# Misc
+.DS_Store
+*.pem
+.AppleDouble
+.LSOverride
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Environment Variables
+.env
+.env*.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Vercel
+.vercel
+
+# Typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+*.sublime-workspace
+*.sublime-project
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Testing
+coverage/
+.nyc_output
+*.lcov
+.coverage
+
+# Prisma
+prisma/migrations/**/migration.sql
+prisma/*.db
+prisma/*.db-journal
+
+# Database
+*.sqlite
+*.sqlite3
+*.db
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ChromaDB
+chroma_data/
+.chroma/
+
+# Redis dump
+dump.rdb
+
+# Docker
+docker-compose.override.yml
+.dockerignore
+
+# Backups
+*.backup
+*.bak
+*.tmp
+
+# Secrets
+secrets/
+*.key
+*.pem
+*.cert
+credentials.json
+service-account.json
+
+# Build artifacts
+.cache/
+*.tgz
+
+# Temporary files
+temp/
+tmp/
+*.tmp
+
+# Python (if using Python scripts)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Local data
+data/
+uploads/
+downloads/
+
+# AWS
+.aws/
+*.pem
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+
+# Archives
+*.zip
+*.tar.gz
+*.rar
+
+# Large files
+*.pdf
+*.docx
+*.xlsx
+*.pptx
+
+# BullMQ
+.bullmq/
